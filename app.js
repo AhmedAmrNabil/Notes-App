@@ -12,7 +12,7 @@ const cookieParser = require("cookie-parser");
 const port = process.env.PORT;
 const app = express();
 
-app.use(cors({ origin: "http://btngana.viewdns.net" }));
+app.use(cors({ origin: "https://notes-app-tan.vercel.app" }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("google-keep/build",{index: false}));
