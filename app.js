@@ -15,7 +15,7 @@ const app = express();
 app.use(cors({ origin: "http://btngana.viewdns.net" }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static("google-keep/build"));
+app.use(express.static("google-keep/build",{index: false}));
 app.use(cookieParser());
 app.use(
   session({
@@ -77,7 +77,7 @@ passport.use(
 
 app.get("/", function (req, res) {
   if (req.isAuthenticated()) {
-    res.sendFile(`${__dirname}/google-keep/build/main.html`);
+    res.sendFile(`${__dirname}/google-keep/build/index.html`);
   } else {
     res.redirect("/auth/google");
   }
@@ -96,7 +96,8 @@ app.get(
   }
 );
 
-app.post("/logout", function (req, res, next) {
+app.get("/logout",cors({ origin: true }), function (req, res, next) {
+  console.log("logging out")
   req.logout(function (err) {
     if (err) {
       return next(err);
