@@ -90,11 +90,11 @@ form {
 }
 
 .note {
-  margin: 10px;
+  margin: 20px 10px;
   /* border: 1px solid #2e3033; */
   border-radius: 8px;
   width: 240px;
-  float: left;
+  word-wrap: break-word;
   box-shadow: -4px -4px 8px #2b2d31, 4px 4px 8px #1d1e20;
 }
 
@@ -114,10 +114,12 @@ form {
 .notes-grid {
   display: flex;
   width: auto;
+  justify-content: center;
 }
 .notes-column {
   background-clip: padding-box;
-  width: 260px;
+  width: 260px !important;
+  /* display: flex; */
 }
 
 /* Icons section */
@@ -156,4 +158,10 @@ form {
   text-align: center;
   padding: 10px 0 20px;
   color: #777;
+}
+
+@media only screen and (max-width: 600px) {
+  .create-note {
+    width: 80%;
+  }
 }
