@@ -90,7 +90,7 @@ app.get(
 
 app.get(
   "/auth/google/keeper",
-  passport.authenticate("google", { failureRedirect: "/" }),
+  passport.authenticate("google"),
   function (req, res) {
     res.redirect("/");
   }

@@ -22,7 +22,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://btngana-notes-app.herokuapp.com/",
   "eslintConfig": {
     "extends": [
       "react-app",
