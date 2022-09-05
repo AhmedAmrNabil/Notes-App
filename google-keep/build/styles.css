@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #202124;
+  color: #e8eaed;
+}
+
+
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* Header Section */
+
+.header {
+  display: flex;
+  height: 64px;
+  align-items: center;
+  font-size: 1.75rem;
+  padding-left: 20px;
+  border-bottom: 1px solid #5f6368;
+  font-weight: 500;
+}
+.right{
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+
+/* Create Note Section */
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.create-note {
+  width: 480px;
+  margin: 36px auto;
+  border: 1px solid #5f6368;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 50%);
+}
+.create-note .title,
+.create-note .content {
+  width: 100%;
+  background-color: #202124;
+  color: #e8eaed;
+  font-size: 1rem;
+  border-color: transparent;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  padding: 12px;
+  outline: none;
+  font-family: inherit;
+  resize: none;
+}
+.create-note .title {
+  margin-top: 5px;
+  padding-bottom: 0;
+  font-weight: 500;
+}
+
+.create-note .content{
+  padding-bottom: 0px;
+  padding-top: 7px;
+  margin-top: 5px;
+  margin-bottom: 7px;
+}
+.create-note .title::placeholder {
+  color: #a4a4a4;
+  font-weight: 500;
+}
+
+.create-note .content::placeholder {
+  color: #bcbcbc;
+}
+
+.add {
+  text-align: right;
+}
+
+.add-icon{
+  margin: -1px 10px 6px;
+  cursor: pointer;
+}
+
+/* Notes Section */
+
+.content-wrap{
+  flex-direction: column;
+  display: flex;
+}
+
+.note {
+  margin: 10px;
+  border: 1px solid #5f6368;
+  border-radius: 8px;
+  width: 240px;
+  float: left;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+}
+
+.note .title {
+  padding: 12px 16px 0px;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.note .content {
+  font-size: 14px;
+  padding: 4px 16px 4px;
+  line-height: 1.25rem;
+  word-wrap: break-word;
+}
+
+.notes-grid{
+  display: flex;
+  width: auto;
+
+}
+.notes-column{
+  background-clip: padding-box;
+  width: 260px;
+}
+
+.delete {
+  text-align: right;
+}
+.delete-icon {
+  margin: 0 10px 8px 0;
+  cursor: pointer;
+}
+
+
+/* Footer Section */
+
+.footer{
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding:  10px 0 20px;
+  color: #777;
+}
