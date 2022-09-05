@@ -15,7 +15,7 @@ function Header() {
           className="icon"
           style={style}
           onClick={() => {
-            axios.post("/logout");
+            axios.post("logout");
           }}
         />
       </div>
