@@ -147,7 +147,7 @@ form {
   box-shadow: none;
   /* box-shadow: none; */
   transition: all ease-in-out 50ms;
-  box-shadow: inset -2px -2px 4px #2b2d31,inset 2px 2px 4px #1d1e20;
+  box-shadow: inset -2px -2px 4px #2b2d31, inset 2px 2px 4px #1d1e20;
 }
 
 /* Footer Section */
@@ -163,5 +163,15 @@ form {
 @media only screen and (max-width: 600px) {
   .create-note {
     width: 80%;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .notes-column {
+    width: 80% !important;
+  }
+  .note {
+    width: 100%;
+    margin: 20px 0px;
   }
 }
