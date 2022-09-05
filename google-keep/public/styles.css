@@ -5,10 +5,9 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-  background-color: #202124;
+  background-color: #242529;
   color: #e8eaed;
 }
-
 
 #root {
   min-height: 100vh;
@@ -24,10 +23,11 @@ body {
   align-items: center;
   font-size: 1.75rem;
   padding-left: 20px;
-  border-bottom: 1px solid #5f6368;
+  border-bottom: 1px solid hsl(216, 5%, 19%);
   font-weight: 500;
+  box-shadow: 2px 2px 4px #18191b;
 }
-.right{
+.right {
   position: absolute;
   right: 20px;
   cursor: pointer;
@@ -43,15 +43,13 @@ form {
 .create-note {
   width: 480px;
   margin: 36px auto;
-  border: 1px solid #5f6368;
   border-radius: 8px;
-  position: relative;
-  box-shadow: 0 3px 8px rgb(0 0 0 / 50%);
+  box-shadow: -6px -6px 12px #303236, 6px 6px 12px #18191b;
 }
 .create-note .title,
 .create-note .content {
   width: 100%;
-  background-color: #202124;
+  background-color: transparent;
   color: #e8eaed;
   font-size: 1rem;
   border-color: transparent;
@@ -68,7 +66,7 @@ form {
   font-weight: 500;
 }
 
-.create-note .content{
+.create-note .content {
   padding-bottom: 0px;
   padding-top: 7px;
   margin-top: 5px;
@@ -83,29 +81,20 @@ form {
   color: #bcbcbc;
 }
 
-.add {
-  text-align: right;
-}
-
-.add-icon{
-  margin: -1px 10px 6px;
-  cursor: pointer;
-}
-
 /* Notes Section */
 
-.content-wrap{
+.content-wrap {
   flex-direction: column;
   display: flex;
 }
 
 .note {
   margin: 10px;
-  border: 1px solid #5f6368;
+  /* border: 1px solid #2e3033; */
   border-radius: 8px;
   width: 240px;
   float: left;
-  box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+  box-shadow: -4px -4px 8px #2b2d31, 4px 4px 8px #1d1e20;
 }
 
 .note .title {
@@ -121,31 +110,49 @@ form {
   word-wrap: break-word;
 }
 
-.notes-grid{
+.notes-grid {
   display: flex;
   width: auto;
-
 }
-.notes-column{
+.notes-column {
   background-clip: padding-box;
   width: 260px;
 }
 
-.delete {
+/* Icons section */
+
+.delete,
+.add {
   text-align: right;
-}
-.delete-icon {
-  margin: 0 10px 8px 0;
-  cursor: pointer;
+  vertical-align: middle;
 }
 
+.icon {
+  position: relative;
+  vertical-align: middle;
+  box-sizing: content-box;
+  margin: 0 10px 10px 0;
+  padding: 4px;
+  cursor: pointer;
+  color: #d6d7db;
+  border-radius: 4px;
+  box-shadow: -3px -3px 6px #2b2d31, 3px 3px 6px #1d1e20,
+    inset 0px 0px 0px transparent, inset 0px 0px 0px transparent;
+}
+
+.icon:active {
+  box-shadow: none;
+  /* box-shadow: none; */
+  transition: all ease-in-out 50ms;
+  box-shadow: inset -2px -2px 4px #2b2d31,inset 2px 2px 4px #1d1e20;
+}
 
 /* Footer Section */
 
-.footer{
+.footer {
   bottom: 0;
   width: 100%;
   text-align: center;
-  padding:  10px 0 20px;
+  padding: 10px 0 20px;
   color: #777;
 }

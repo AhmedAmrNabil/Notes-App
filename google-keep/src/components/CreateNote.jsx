@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NoteAddIcon from "@mui/icons-material/NoteAdd";
+import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import { v4 as uuidv4 } from 'uuid';
 
 function CreateNote(props) {
@@ -48,7 +48,7 @@ function CreateNote(props) {
           value={text.content}
         ></textarea>
         <div className="add" type="submit" hidden={!focus}>
-          <NoteAddIcon className="add-icon" onClick={handleClick} />
+          <AddOutlinedIcon className="icon" onClick={handleClick} />
         </div>
       </div>
     </form>
