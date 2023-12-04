@@ -15,7 +15,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static("google-keep/build",{index: false}));
+app.use(express.static("Keeper/build",{index: false}));
 app.use(cookieParser());
 app.use(
   session({
@@ -77,7 +77,7 @@ passport.use(
 
 app.get("/", function (req, res) {
   if (req.isAuthenticated()) {
-    res.sendFile(`${__dirname}/google-keep/build/index.html`);
+    res.sendFile(`${__dirname}/Keeper/build/index.html`);
   } else {
     res.redirect("/auth/google");
   }
